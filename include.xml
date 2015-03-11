@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	<section unless="BUNDLE_FILE_ALERT" if="ios">
+		<echo value="UnityAds: REMEMBER TO DRAG AND DROP THE UnityAds.bundle FILE INSIDE THE RESOURCES FOLDER IN xCode AFTER EACH BUILD/UPDATE" />
+		<setenv name="BUNDLE_FILE_ALERT" value="1" />
+	</section>
+	
+	<ndll name="openflunityads" if="ios" />
+    <dependency path="frameworks/UnityAds.framework" if="ios" />
+    <dependency name="UnityAds.framework" if="ios" />
+    <dependency name="StoreKit.framework" if="ios" />
+    <dependency name="CoreMedia.framework" if="ios" />
+    <dependency name="CoreTelephony.framework" if="ios" />
+    <dependency name="SystemConfiguration.framework" if="ios" />
+    <dependency name="AdSupport.framework" if="ios" />
+    	
+	<!-- Use the following for an Android Java extension, not needed otherwise -->
+	
+	<dependency name="openfl_unityads" path="dependencies/android" if="android" />
+	<android extension="com.ipsilondev.UnityAdsWrapper" />
+	<android permission="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<android target-sdk-version="17" />
+</project>

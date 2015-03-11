@@ -1,0 +1,13 @@
+{
+  "name": "openfl-unityads",
+  "url": "https://github.com/ipsilondev/openfl-unityads",
+  "license": "MIT",
+  "tags": ["cross","openfl","ads","unity"],
+  "description": "UnityAds Implementation for OpenFL/Haxe",
+  "version": "1.0.0",
+  "releasenote": "",
+  "contributors": ["ipsilondev"],
+  "dependencies": {
+
+  }
+}
