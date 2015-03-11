@@ -14,7 +14,6 @@ extern "C" {
 }
 
 - (void)initUnityAds:(NSString*)gameId testModeOn:(BOOL)testMode debugModeOn:(BOOL)debugMode;
-//- (bool)showAd:(NSString*)zone rewardKeyOn:(NSString*)rewardKey;
 @end
 
 @implementation UnityAdsWrapper
@@ -26,25 +25,6 @@ extern "C" {
 	
 	[[UnityAds sharedInstance] startWithGameId:gameId andViewController:[[[UIApplication sharedApplication] keyWindow] rootViewController]];	
 }
-
-/*- (bool)showAd:(NSString*)zoneId rewardKeyOn:(NSString*)rewardItemKey{
-if ([[UnityAds sharedInstance] canShowAds] && [[UnityAds sharedInstance] canShow]) {
-            NSLog(@"showad3");
-            if([rewardItemKey length] > 0) {
-                [[UnityAds sharedInstance] setZone:zoneId withRewardItem:rewardItemKey];
-            } else {
-                [[UnityAds sharedInstance] setZone:zoneId];
-            }
-            NSLog(@"showad4");
-            return [[UnityAds sharedInstance] show];
-            NSLog(@"showad5");
-            
-            return true;
-    }
-    NSLog(@"showad6");
-    return false;
-}*/
-
 
 - (void)unityAdsFetchCompleted {
 	NSLog(@"unityAdsFetchCompleted");
@@ -94,22 +74,16 @@ namespace openflunityads {
     NSString * rewardItemKey = UnityAdsCreateNSString(rawRewardItemKey);
 	
 	if ([[UnityAds sharedInstance] canShowAds] && [[UnityAds sharedInstance] canShow]) {
-            NSLog(@"showad3");
             if([rewardItemKey length] > 0) {
                 [[UnityAds sharedInstance] setZone:zoneId withRewardItem:rewardItemKey];
             } else {
                 [[UnityAds sharedInstance] setZone:zoneId];
             }
-            NSLog(@"showad4");
             [[UnityAds sharedInstance] show];
-            NSLog(@"showad5");
             return true;
     }
-    NSLog(@"showad6");
     return false;
-    
-	//return [[UnityAdsWrapper alloc] showAd:UnityAdsCreateNSString(rawZoneId)  rewardKeyOn:UnityAdsCreateNSString(rawRewardItemKey)];
-	
+   	
 	}
 	
 	void onFetch(bool result){
