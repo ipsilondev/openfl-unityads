@@ -58,6 +58,7 @@ Then, you must set up the event listeners, and then initialize.
 Important Notes
 ==========
 
+![](https://github.com/ipsilondev/openfl-unityads/blob/master/xcode-example.jpg?raw=true)
 1) **Drag and Drop the UnityAds.bundle file inside the Resources folder in xCode !!! If you don't do this, your app will crash at showing the ad !**
 
 2) This are all the available events that you can listen to. Is optional if you want to support all, or just a few. But be sure to catch up **onFetch event**, that say if the connection to UnityAds servers was successful and if is ready to show ads.
