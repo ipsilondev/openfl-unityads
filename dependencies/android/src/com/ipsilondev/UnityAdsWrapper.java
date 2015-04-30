@@ -54,6 +54,14 @@ public class UnityAdsWrapper extends Extension{
 			return false;
 		}
 	}
+	
+	public static boolean canShowAd(){
+		if(UnityAds.canShow() && UnityAds.canShowAds()){
+		return true;
+		}else{
+		return false;	
+		}
+	}
 			
 	
 	/**

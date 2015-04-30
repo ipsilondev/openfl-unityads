@@ -30,6 +30,9 @@ class UnityAds {
 		if (instance == null) { instance = new UnityAds(); }
 		return instance;
 	}
+	public static function canShowAds():Bool{
+		return libCanShowAd();
+	}
 	
 	////java binings
 	private static var libInit:UnityAds->String->Bool->Bool->Void =
@@ -59,6 +62,17 @@ class UnityAds {
 	#else
 	function(s:String="", s2:String=""):Bool {
 		return true;
+	};
+	#end
+	
+	private static var libCanShowAd:Void->Bool =
+	#if android
+	JNI.createStaticMethod("com.ipsilondev.UnityAdsWrapper","canShowAd","()Z");
+	#elseif ios
+	Lib.load("openflunityads","openflunityads_canShowAd",0);
+	#else
+	function():Bool {
+		return false;
 	};
 	#end
 	

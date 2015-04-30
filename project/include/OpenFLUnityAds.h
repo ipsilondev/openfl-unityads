@@ -17,6 +17,7 @@ namespace openflunityads {
 	void setOnVideoStartedCB(value f);
 	void setOnVideoHideCB(value f);
 	void setOnVideoShowCB(value f);
+	bool canShowAds();
 	
 }
 

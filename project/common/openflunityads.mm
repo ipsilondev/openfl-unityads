@@ -134,11 +134,11 @@ namespace openflunityads {
 
 	
 	bool canShowAds () {
-        return [[UnityAds sharedInstance] canShowAds];
-    }
-    
-	bool canShow () {
-        return [[UnityAds sharedInstance] canShow];
+		if([[UnityAds sharedInstance] canShowAds] && [[UnityAds sharedInstance] canShow]){
+        return true;
+		}else{			
+        return false;
+		}
     }
 	
 	

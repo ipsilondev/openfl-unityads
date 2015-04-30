@@ -63,6 +63,12 @@ static void openflunityads_setOnVideoShowCB (value f) {
 }
 DEFINE_PRIM (openflunityads_setOnVideoShowCB, 1);
 
+static value openflunityads_canShowAd () {
+	
+	return alloc_bool(canShowAds());
+}
+DEFINE_PRIM (openflunityads_canShowAd, 0);
+
 
 extern "C" void openflunityads_main () {
 	
