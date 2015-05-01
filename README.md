@@ -53,6 +53,13 @@ Then, you must set up the event listeners, and then initialize.
 			}
 		};
 		UnityAds.init("YOUR_GAME_ID", true,true);
+		
+		//check statically if you are enable to show ads
+		if(UnityAds.canShowAds()){
+		Lib.trace("I can show ads !");
+		}else{
+		Lib.trace("I can NOT show ads !");
+		}
 ```
 
 Important Notes
