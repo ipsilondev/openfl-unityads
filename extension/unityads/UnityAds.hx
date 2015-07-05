@@ -37,7 +37,7 @@ class UnityAds {
 	////java binings
 	private static var libInit:UnityAds->String->Bool->Bool->Void =
 	#if android
-	JNI.createStaticMethod("com.ipsilondev.UnityAdsWrapper","init","(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
+	JNI.createStaticMethod("com/ipsilondev/UnityAdsWrapper","init","(Lorg/haxe/lime/HaxeObject;Ljava/lang/String;ZZ)V");
 	#elseif ios
 	function(o:UnityAds, s:String, b1:Bool, b2:Bool):Void {
 		onFetchiOSCallBack(getInstance().unityAdsOnFetch);
@@ -56,7 +56,7 @@ class UnityAds {
 	
 	private static var libShowAd:String->String->Bool =
 	#if android
-	JNI.createStaticMethod("com.ipsilondev.UnityAdsWrapper","showAd","(Ljava/lang/String;Ljava/lang/String;)Z");
+	JNI.createStaticMethod("com/ipsilondev/UnityAdsWrapper","showAd","(Ljava/lang/String;Ljava/lang/String;)Z");
 	#elseif ios
 	Lib.load("openflunityads","openflunityads_showAd",2);
 	#else
@@ -67,7 +67,7 @@ class UnityAds {
 	
 	private static var libCanShowAd:Void->Bool =
 	#if android
-	JNI.createStaticMethod("com.ipsilondev.UnityAdsWrapper","canShowAd","()Z");
+	JNI.createStaticMethod("com/ipsilondev/UnityAdsWrapper","canShowAd","()Z");
 	#elseif ios
 	Lib.load("openflunityads","openflunityads_canShowAd",0);
 	#else
