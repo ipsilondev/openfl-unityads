@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": ["cross","openfl","ads","unity"],
   "description": "UnityAds Implementation for OpenFL/Haxe",
-  "version": "1.0.1",
-  "releasenote": "Updating SDK and exposing canShowAds() function",
+  "version": "1.0.3",
+  "releasenote": "Fixing bug on JNI initialization",
   "contributors": ["ipsilondev"],
   "dependencies": {
 
