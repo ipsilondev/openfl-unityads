@@ -4,8 +4,8 @@
   "license": "MIT",
   "tags": ["cross","openfl","ads","unity"],
   "description": "UnityAds Implementation for OpenFL/Haxe",
-  "version": "1.0.3",
-  "releasenote": "Fixing bug on JNI initialization",
+  "version": "1.0.4",
+  "releasenote": "Updating UnityAds SDK to 1.5.3 version",
   "contributors": ["ipsilondev"],
   "dependencies": {
 

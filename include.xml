@@ -20,4 +20,18 @@
 	<android extension="com.ipsilondev.UnityAdsWrapper" />
 	<android permission="android.permission.WRITE_EXTERNAL_STORAGE" />
 	<android target-sdk-version="17" />
+	<template path="dependencies/android/res/drawable/unityads_background_button_pause.xml" rename="res/drawable/unityads_background_button_pause.xml" />
+	<template path="dependencies/android/res/drawable/unityads_icon_play.xml" rename="res/drawable/unityads_icon_play.xml" />
+	<template path="dependencies/android/res/drawable/unityads_icon_speaker_base.xml" rename="res/drawable/unityads_icon_speaker_base.xml" />
+	<template path="dependencies/android/res/drawable/unityads_icon_speaker_triangle.xml" rename="res/drawable/unityads_icon_speaker_triangle.xml" />
+	<template path="dependencies/android/res/drawable/unityads_icon_speaker_waves.xml" rename="res/drawable/unityads_icon_speaker_waves.xml" />
+	
+	<template path="dependencies/android/res/layout/unityads_button_audio_toggle.xml" rename="res/layout/unityads_button_audio_toggle.xml" />
+	<template path="dependencies/android/res/layout/unityads_button_pause.xml" rename="res/layout/unityads_button_pause.xml" />
+	<template path="dependencies/android/res/layout/unityads_view_video_paused.xml" rename="res/layout/unityads_view_video_paused.xml" />
+	<template path="dependencies/android/res/layout/unityads_view_video_play.xml" rename="res/layout/unityads_view_video_play.xml" />
+	
+	<template path="dependencies/android/res/values/strings.xml" rename="res/values/strings.xml" />
+	
+
 </project>
