@@ -4,7 +4,7 @@
   "license": "MIT",
   "tags": ["cross","openfl","ads","unity"],
   "description": "UnityAds Implementation for OpenFL/Haxe",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "releasenote": "Updating UnityAds SDK to 1.5.3 version",
   "contributors": ["ipsilondev"],
   "dependencies": {
