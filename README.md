@@ -11,6 +11,14 @@ Or Follow us on **[Twitter](https://twitter.com/ipsilondev)**
 
 You can also contact us at **info [AT] ipsilondev.com**
 
+Known problems:
+==========
+
+When compiling to Android, if you find an error like:
+`Can't read [/PATH/TO/unity-ads.jar] ( Can't process class [com/unity3d/ads/android/cache/UnityAdsCacheThread.class] (15360))`
+
+For now, you can disable Proguard, by commenting line 16 in [project.properties](https://github.com/ipsilondev/openfl-unityads/blob/master/dependencies/android/project.properties#L16). On next release, or the .jar will be replaced with the SDK source code, or this line will be commented forever.
+
 How to use
 ==========
 
